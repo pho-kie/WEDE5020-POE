@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+
+        <meta charset="UTF-8">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <meta name="description" content="Laphoshee Salon gallery - hairstyles, mails, haircuts and tattoos.">
+
+        <title>Gallery</title>
+
+        <link rel="stylesheet" href="CSS/style.css">
+    </head>
+    <body>
+    <header>
+    <h1>Laphoshee Salon</h1>
+
+    <nav>
+
+        <!-- Responsive salon logo.
+             The browser selects the appropriate image size
+             depending on the visitor's screen size. -->
+
+        <img src="images/a-large.jpg"
+             srcset="images/a-small.jpg 320w,
+                     images/a-medium.jpg 640w,
+                     images/a-large.jpg 1024w"
+             sizes="(max-width: 600px) 90vw,
+                    (max-width: 950px) 70vw,
+                    400px"
+             alt="Laphoshee Salon logo">
+
+        <!-- Navigation links connecting all website pages -->
+        <div class="nav-links">
+            <a href="home.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="services.html">Our Services</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="enquiry.html">Make an Enquiry</a>
+            <a href="contact.html">Contact Us</a>
+        </div>
+
+    </nav>
+</header>
+    <main>
+
+    <h2>Our Gallery</h2>
+
+    <p>
+        Explore some of the beauty and grooming work
+        offered by Laphoshee Salon.
+    </p>
+
+    <!-- Gallery search functionality -->
+    <input type="search"
+           id="gallerySearch"
+           placeholder="Search gallery..."
+           aria-label="Search gallery images">
+
+    <!-- Gallery category filters -->
+    <div class="filter-buttons">
+
+        <button class="gallery-filter active"
+                data-filter="all">
+            All
+        </button>
+
+        <button class="gallery-filter"
+                data-filter="braiding">
+            Braiding
+        </button>
+
+        <button class="gallery-filter"
+                data-filter="nails">
+            Nails
+        </button>
+
+        <button class="gallery-filter"
+                data-filter="haircuts">
+            Haircuts
+        </button>
+
+        <button class="gallery-filter"
+                data-filter="tattoos">
+            Tattoos
+        </button>
+
+    </div>
+
+    <!-- Gallery images.
+         Each image has a category and description for filtering. -->
+    <div class="gallery-grid" id="galleryGrid">
+
+        <!-- Braiding images -->
+        <img src="images/hair.jpg"
+             alt="Braiding hairstyle"
+             data-category="braiding">
+
+        <img src="images/hair2.jpg"
+             alt="Knotless braids"
+             data-category="braiding">
+
+        <img src="images/hair3.jpg"
+             alt="Cornrow hairstyle"
+             data-category="braiding">
+
+        <img src="images/hair4.jpg"
+             alt="Braiding hairstyle example"
+             data-category="braiding">
+
+        <img src="images/hair5.jpg"
+             alt="Braiding inspiration"
+             data-category="braiding">
+
+        <!-- Nail images -->
+        <img src="images/nails.jpg"
+             alt="Nail art"
+             data-category="nails">
+
+        <img src="images/nail2.jpg"
+             alt="Nail design"
+             data-category="nails">
+
+        <img src="images/nail3.jpg"
+             alt="Nail inspiration"
+             data-category="nails">
+
+        <img src="images/nail4.jpg"
+             alt="Nail design example"
+             data-category="nails">
+
+        <img src="images/nail5.jpg"
+             alt="Manicure design"
+             data-category="nails">
+
+        <!-- Haircut images -->
+        <img src="images/cut.jpg"
+             alt="Haircut"
+             data-category="haircuts">
+
+        <img src="images/cut2.jpg"
+             alt="Modern haircut"
+             data-category="haircuts">
+
+        <img src="images/cut3.jpg"
+             alt="Haircut inspiration"
+             data-category="haircuts">
+
+        <img src="images/cut4.jpg"
+             alt="Haircut example"
+             data-category="haircuts">
+
+        <img src="images/cut5.jpg"
+             alt="Haircut style"
+             data-category="haircuts">
+
+        <!-- Tattoo images -->
+        <img src="images/tattoo.jpg"
+             alt="Tattoo design"
+             data-category="tattoos">
+
+        <img src="images/tattoo2.jpg"
+             alt="Tattoo example"
+             data-category="tattoos">
+
+        <img src="images/tattoo3.jpg"
+             alt="Tattoo inspiration"
+             data-category="tattoos">
+
+        <img src="images/tattoo4.jpg"
+             alt="Tattoo design example"
+             data-category="tattoos">
+
+        <img src="images/tattoo5.jpg"
+             alt="Tattoo artwork"
+             data-category="tattoos">
+
+    </div>
+
+    <p id="noGalleryResults" hidden>
+        No matching images were found.
+    </p>
+
+    <!-- Lightbox dialog.
+         JavaScript displays the selected image in a larger view. -->
+    <dialog id="lightbox">
+
+        <button id="closeLightbox"
+                class="close-lightbox"
+                aria-label="Close enlarged image">
+            &times;
+        </button>
+
+        <img id="lightboxImage"
+             src=""
+             alt="Enlarged gallery image">
+
+        <p id="lightboxCaption"></p>
+
+    </dialog>
+
+</main>
+    <hr>
+    <footer>&copy;ST10533971#Laphoshee_Salon</footer>
+    <!-- Connects the gallery to JavaScript -->
+<script src="JAV/script.js" defer></script>
+    </body>
+</html>

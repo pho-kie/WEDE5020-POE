@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Our Services</title>
+        <link rel="stylesheet" href="CSS/style.css">
+    </head>
+    <body>
+    <header>
+    <h1>Laphoshee Salon</h1>
+
+    <nav>
+
+        <!-- Responsive salon logo.
+             The browser selects the appropriate image size
+             depending on the visitor's screen size. -->
+
+        <img src="images/a-large.jpg"
+             srcset="images/a-small.jpg 320w,
+                     images/a-medium.jpg 640w,
+                     images/a-large.jpg 1024w"
+             sizes="(max-width: 600px) 90vw,
+                    (max-width: 950px) 70vw,
+                    400px"
+             alt="Laphoshee Salon logo">
+
+        <!-- Navigation links connecting all website pages -->
+        <div class="nav-links">
+            <a href="home.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="services.html">Our Services</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="enquiry.html">Make an Enquiry</a>
+            <a href="contact.html">Contact Us</a>
+        </div>
+
+    </nav>
+</header>
+    <main>
+
+    <h2>Our Services</h2>
+
+    <p>
+        At Laphoshee Salon, we offer different beauty and grooming
+        services to help our customers look and feel their best.
+    </p>
+
+    <!-- JavaScript search bar.
+         Customers can type a service name to find it. -->
+    <input type="search"
+           id="serviceSearch"
+           placeholder="Search for a service..."
+           aria-label="Search salon services">
+
+    <!-- Interactive category buttons.
+         JavaScript will filter the services when clicked. -->
+    <div class="filter-buttons">
+
+        <button class="filter-btn active" data-filter="all">
+            All Services
+        </button>
+
+        <button class="filter-btn" data-filter="braiding">
+            Braiding
+        </button>
+
+        <button class="filter-btn" data-filter="nails">
+            Nails
+        </button>
+
+        <button class="filter-btn" data-filter="haircuts">
+            Haircuts
+        </button>
+
+        <button class="filter-btn" data-filter="tattoos">
+            Tattoos
+        </button>
+
+    </div>
+
+    <!-- All service cards are placed inside this container.
+         JavaScript will show or hide cards according to the search. -->
+    <div class="service-grid" id="serviceGrid">
+
+        <!-- BRAIDING -->
+        <div class="service-card" data-category="braiding">
+
+            <img src="images/hair.jpg"
+                 srcset="images/hair-small.jpg 320w,
+                         images/hair-medium.jpg 640w,
+                         images/hair-large.jpg 1024w"
+                 sizes="(max-width: 600px) 90vw, 300px"
+                 alt="Braiding hairstyle">
+
+            <h3>Braiding</h3>
+
+            <p>
+                We offer different types of braiding hairstyles,
+                including knotless braids and cornrows.
+            </p>
+
+            <a href="enquiry.html">Enquire Now</a>
+
+        </div>
+
+        <div class="service-card" data-category="braiding">
+
+            <img src="images/hair2.jpg"
+                 alt="Additional braiding hairstyle">
+
+            <h3>Hair Styling</h3>
+
+            <p>
+                Choose a hairstyle that matches your personal style.
+            </p>
+
+            <a href="enquiry.html">Enquire Now</a>
+
+        </div>
+
+        <!-- NAILS -->
+        <div class="service-card" data-category="nails">
+
+            <img src="images/nails.jpg"
+                 alt="Nail design and manicure">
+
+            <h3>Nail Services</h3>
+
+            <p>
+                We provide beautiful nail designs and nail
+                services to suit different preferences.
+            </p>
+
+            <a href="enquiry.html">Enquire Now</a>
+
+        </div>
+
+        <div class="service-card" data-category="nails">
+
+            <img src="images/nail2.jpg"
+                 alt="Creative nail art design">
+
+            <h3>Nail Art</h3>
+
+            <p>
+                Explore different nail designs and styles.
+            </p>
+
+            <a href="enquiry.html">Enquire Now</a>
+
+        </div>
+
+        <!-- HAIRCUTS -->
+        <div class="service-card" data-category="haircuts">
+
+            <img src="images/cut.jpg"
+                 alt="Haircut example">
+
+            <h3>Haircuts</h3>
+
+            <p>
+                We provide different haircut styles for our
+                male and female customers.
+            </p>
+
+            <a href="enquiry.html">Enquire Now</a>
+
+        </div>
+
+        <div class="service-card" data-category="haircuts">
+
+            <img src="images/cut2.jpg"
+                 alt="Modern haircut style">
+
+            <h3>Modern Haircuts</h3>
+
+            <p>
+                Choose a haircut that complements your appearance.
+            </p>
+
+            <a href="enquiry.html">Enquire Now</a>
+
+        </div>
+
+        <!-- TATTOOS -->
+        <div class="service-card" data-category="tattoos">
+
+            <img src="images/tattoo.jpg"
+                 alt="Tattoo design example">
+
+            <h3>Tattoos</h3>
+
+            <p>
+                Explore tattoo designs and enquire about
+                your preferred tattoo.
+            </p>
+
+            <a href="enquiry.html">Enquire Now</a>
+
+        </div>
+
+        <div class="service-card" data-category="tattoos">
+
+            <img src="images/tattoo2.jpg"
+                 alt="Additional tattoo design">
+
+            <h3>Tattoo Designs</h3>
+
+            <p>
+                Enquire about the tattoo design you would like.
+            </p>
+
+            <a href="enquiry.html">Enquire Now</a>
+
+        </div>
+
+    </div>
+
+    <!-- Displays a message if no services match the search -->
+    <p id="noServices" hidden>
+        No services found. Please try another search.
+    </p>
+
+    <!-- FAQ accordion: JavaScript expands and collapses answers -->
+    <h2>Frequently Asked Questions</h2>
+
+    <div class="faq-container">
+
+        <div class="faq-item">
+
+            <button class="faq-question"
+                    aria-expanded="false">
+                What services does Laphoshee Salon offer?
+                <span>+</span>
+            </button>
+
+            <div class="faq-answer" hidden>
+                <p>
+                    We offer braiding, nail services, haircuts
+                    and tattoos.
+                </p>
+            </div>
+
+        </div>
+
+        <div class="faq-item">
+
+            <button class="faq-question"
+                    aria-expanded="false">
+                How can I enquire about prices?
+                <span>+</span>
+            </button>
+
+            <div class="faq-answer" hidden>
+                <p>
+                    You can complete our online enquiry form
+                    to ask about service prices.
+                </p>
+            </div>
+
+        </div>
+
+        <div class="faq-item">
+
+            <button class="faq-question"
+                    aria-expanded="false">
+                Where are you located?
+                <span>+</span>
+            </button>
+
+            <div class="faq-answer" hidden>
+                <p>
+                    Laphoshee Salon is based in Orange Farm,
+                    Johannesburg.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+</main>
+    <hr>
+    <footer>&copy;ST10533971#Laphoshee_Salon</footer>
+    <!-- Connects the services page to its JavaScript functionality -->
+<script src="JAV/script.js" defer></script>
+    </body>
+</html>

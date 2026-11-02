@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+
+    <!-- Allows the website to adjust to different screen sizes -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO description -->
+    <meta name="description" content="Welcome to Laphoshee Salon in Orange Farm. We offer braiding, nail services, haircuts and tattoos.">
+
+    <title>Laphoshee Salon | Home</title>
+
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+    <body style = "background-color: beige;">
+    <header>
+    <h1>Laphoshee Salon</h1>
+
+    <nav>
+
+        <!-- Responsive salon logo.
+             The browser selects the appropriate image size
+             depending on the visitor's screen size. -->
+
+        <img src="images/a-large.jpg"
+             srcset="images/a-small.jpg 320w,
+                     images/a-medium.jpg 640w,
+                     images/a-large.jpg 1024w"
+             sizes="(max-width: 600px) 90vw,
+                    (max-width: 950px) 70vw,
+                    400px"
+             alt="Laphoshee Salon logo">
+
+        <!-- Navigation links connecting all website pages -->
+        <div class="nav-links">
+            <a href="home.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="services.html">Our Services</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="enquiry.html">Make an Enquiry</a>
+            <a href="contact.html">Contact Us</a>
+        </div>
+
+    </nav>
+</header>
+    <main>
+
+        <!--users will be welcomed by the welcome banner and a short video of how the salon looks like-->
+        <h2>Welcome to our salon</h2>
+        <video controls autoplay muted loop src ="images/Video.mp4" aria-label="Video showing Laphoshee Salon"></video>
+        
+        <p>Welcome to Laphoshee where we offer various services which are braiding, nails, haircuts and tattoo making.<br>
+            Our team will absolutely ensure to meet and satisfy your needs and make you feel scrumptious.
+        </p>
+        <h2>Why choose us?</h2>
+        <hr>
+        <ul>
+            <li>We have various services in one setting</li>
+            <li>We offer affordable prices</li>
+            <li>Clean and condusive enviroment</li>
+            <li>Our customer's opinion always matters</li>
+            <li>Well experienced and friendly service providers</li>
+        </ul>
+
+        <!--what services the salon offers and a contact reference that will contact the salon to book an appointment-->
+        <a href="services.html">See our services</a><br>
+        <a href="contact.html"><b></b>Book your appointment now!</a>
+    </main>
+    <hr>
+    <footer>&copy;ST10533971#Laphoshee_Salon</footer>
+    </body>
+</html>

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <!-- Responsive design for mobile devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO description -->
+    <meta name="description"
+          content="Enquire about braiding, nails, haircuts and tattoos at Laphoshee Salon in Orange Farm.">
+
+    <title>Service Enquiries | Laphoshee Salon</title>
+
+    <link rel="stylesheet" href="CSS/style.css">
+
+</head>
+
+<body>
+
+<header>
+
+    <h1>Laphoshee Salon</h1>
+
+    <!-- Website navigation -->
+    <nav>
+
+        <img src="images/a-large.jpg"
+             srcset="images/a-small.jpg 320w,
+                     images/a-medium.jpg 640w,
+                     images/a-large.jpg 1024w"
+             sizes="(max-width: 600px) 90vw, 400px"
+             alt="Laphoshee Salon logo">
+
+        <div class="nav-links">
+            <a href="home.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="services.html">Our Services</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="enquiry.html">Enquiry</a>
+            <a href="contact.html">Contact Us</a>
+        </div>
+
+    </nav>
+
+</header>
+
+<main>
+
+    <h2>Service Enquiry</h2>
+
+    <p>
+        Interested in one of our services?
+        Complete the form below to enquire about prices
+        and appointment availability.
+    </p>
+
+    <!-- Netlify Forms attributes allow form processing after deployment.
+         JavaScript will submit the information using AJAX. -->
+    <form id="enquiryForm"
+          name="enquiry"
+          method="POST"
+          data-netlify="true"
+          netlify-honeypot="bot-field">
+
+        <!-- Required by Netlify to identify the form -->
+        <input type="hidden" name="form-name" value="enquiry">
+
+        <!-- Spam protection field -->
+        <p hidden>
+            <label>
+                Do not fill this in:
+                <input name="bot-field">
+            </label>
+        </p>
+
+        <!-- Customer first name -->
+        <div>
+            <label for="firstName">First Name:</label>
+
+            <input type="text"
+                   id="firstName"
+                   name="firstName"
+                   minlength="2"
+                   maxlength="30"
+                   required>
+        </div>
+
+        <!-- Customer surname -->
+        <div>
+            <label for="lastName">Surname:</label>
+
+            <input type="text"
+                   id="lastName"
+                   name="lastName"
+                   minlength="2"
+                   maxlength="30"
+                   required>
+        </div>
+
+        <!-- Customer email -->
+        <div>
+            <label for="enquiryEmail">Email Address:</label>
+
+            <input type="email"
+                   id="enquiryEmail"
+                   name="email"
+                   placeholder="example@gmail.com"
+                   required>
+        </div>
+
+        <!-- Customer phone -->
+        <div>
+            <label for="enquiryPhone">Phone Number:</label>
+
+            <input type="tel"
+                   id="enquiryPhone"
+                   name="phone"
+                   placeholder="0811234567"
+                   pattern="0[0-9]{9}"
+                   title="Enter a 10-digit South African phone number starting with 0."
+                   required>
+        </div>
+
+        <!-- Customer selects the service -->
+        <div>
+            <label for="serviceType">Select a Service:</label>
+
+            <select id="serviceType"
+                    name="service"
+                    required>
+
+                <option value="">Choose a service</option>
+                <option value="Braiding">Braiding</option>
+                <option value="Nails">Nails</option>
+                <option value="Haircuts">Haircuts</option>
+                <option value="Tattoos">Tattoos</option>
+
+            </select>
+        </div>
+
+        <!-- Preferred appointment date -->
+        <div>
+            <label for="appointmentDate">
+                Preferred Appointment Date:
+            </label>
+
+            <input type="date"
+                   id="appointmentDate"
+                   name="appointmentDate"
+                   required>
+        </div>
+
+        <!-- Additional information -->
+        <div>
+            <label for="enquiryDetails">
+                Additional Requirements:
+            </label>
+
+            <textarea id="enquiryDetails"
+                      name="details"
+                      rows="5"
+                      maxlength="500"
+                      placeholder="Describe the service you would like..."
+                      required></textarea>
+        </div>
+
+        <!-- Submit and reset buttons -->
+        <div>
+            <button type="submit">Submit Enquiry</button>
+
+            <button type="reset">Clear Form</button>
+        </div>
+
+        <!-- JavaScript displays validation and submission feedback here -->
+        <p id="enquiryFeedback" role="status" aria-live="polite"></p>
+
+    </form>
+
+</main>
+
+<footer>&copy;ST10533971#Laphoshee_Salon</footer>
+<!-- JavaScript form validation and AJAX processing -->
+<script src="JAV/script.js" defer></script>
+
+</body>
+</html>

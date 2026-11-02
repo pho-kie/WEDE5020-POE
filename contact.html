@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Contact Laphoshee Salon for appointments and queries.">
+
+        <title>Contact</title>
+        <link rel="stylesheet" href="CSS/style.css">
+        <!-- Leaflet CSS controls the map's appearance -->
+    <link rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+    </head>
+    <body style = "background-color: beige;">
+    <header>
+    <h1>Laphoshee Salon</h1>
+
+    <nav>
+
+        <!-- Responsive salon logo.
+             The browser selects the appropriate image size
+             depending on the visitor's screen size. -->
+
+        <img src="images/a-large.jpg"
+             srcset="images/a-small.jpg 320w,
+                     images/a-medium.jpg 640w,
+                     images/a-large.jpg 1024w"
+             sizes="(max-width: 600px) 90vw,
+                    (max-width: 950px) 70vw,
+                    400px"
+             alt="Laphoshee Salon logo">
+
+        <!-- Navigation links connecting all website pages -->
+        <div class="nav-links">
+            <a href="home.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="services.html">Our Services</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="enquiry.html">Make an Enquiry</a>
+            <a href="contact.html">Contact Us</a>
+        </div>
+
+    </nav>
+</header>
+    <main>
+    <!----contact details so that customers can be able to reach the organisation-->
+<h2>Contact Details</h2>
+<p>We would appreciate it to hear from you! Reach out to book an appointment or if you have a query.</p>
+<h3>You can find us on:</h3>
+<p>Phone: 081 123 4567</p>
+<p>Email: <a href = "mailto:mpholamula55@gmail.com" >Send an email</a> </p>
+<p>Address: <a href = "https://maps.app.goo.gl/WYEwHfiLCw4KSAoN8">123 Orange Farm, Johannesburg 1805 </a></p>
+
+<!---promts the user to enter their details and query or message or book an appointment-->
+<h3>Send Us a Message</h3>
+
+<!-- Contact form for general communication -->
+<form id="contactForm">
+
+    <!-- Customer first name -->
+    <div>
+        <label for="contactFirstName">First Name:</label>
+
+        <input type="text"
+               id="contactFirstName"
+               name="firstName"
+               minlength="2"
+               maxlength="30"
+               required>
+    </div>
+
+    <!-- Customer surname -->
+    <div>
+        <label for="contactLastName">Last Name:</label>
+
+        <input type="text"
+               id="contactLastName"
+               name="lastName"
+               minlength="2"
+               maxlength="30"
+               required>
+    </div>
+
+    <!-- Customer email address -->
+    <div>
+        <label for="contactEmail">Email Address:</label>
+
+        <input type="email"
+               id="contactEmail"
+               name="email"
+               required>
+    </div>
+
+    <!-- Customer phone number -->
+    <div>
+        <label for="contactPhone">Phone Number:</label>
+
+        <input type="tel"
+               id="contactPhone"
+               name="phone"
+               pattern="0[0-9]{9}"
+               placeholder="0811234567"
+               required>
+    </div>
+
+    <!-- Customer selects the type of message -->
+    <div>
+        <label for="messageType">Message Type:</label>
+
+        <select id="messageType"
+                name="messageType"
+                required>
+
+            <option value="">Select a message type</option>
+            <option value="General enquiry">General enquiry</option>
+            <option value="Complaint">Complaint</option>
+            <option value="Compliment">Compliment</option>
+            <option value="Suggestion">Suggestion</option>
+            <option value="Other">Other</option>
+
+        </select>
+    </div>
+
+    <!-- Customer writes their complete message -->
+    <div>
+        <label for="contactMessage">Your Message:</label>
+
+        <textarea id="contactMessage"
+                  name="message"
+                  rows="6"
+                  minlength="10"
+                  maxlength="450"
+                  placeholder="Write your message here..."
+                  required></textarea>
+    </div>
+
+    <!-- Submit and clear buttons -->
+    <div>
+        <button type="submit">Send Message</button>
+
+        <button type="reset">Clear Form</button>
+    </div>
+
+    <!-- Displays validation feedback -->
+    <p id="contactFeedback" role="status" aria-live="polite"></p>
+
+</form>
+    <br>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d57143.429287766514!2d27.86574445!3d-26.47299055!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e95ab178daa65d1%3A0xb125f7b60163e674!2sOrange%20Farm%2C%201805!5e0!3m2!1sen!2sza!4v1786686639861!5m2!1sen!2sza"
+            title="Map showing Orange Farm, Johannesburg"
+            loading = "lazy"
+            allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>
+</form>
+    </main>
+    <hr>
+    <footer>&copy;ST10533971#Laphoshee_Salon</footer>
+    <!-- Leaflet JavaScript library -->
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+<script src="JAV/script.js" defer></script>
+    </body>
+</html>
